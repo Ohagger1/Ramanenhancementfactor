@@ -101,9 +101,10 @@
 
   <script>
     
-    function updateEquation(variable, value) {
-  document.getElementById(variable).textContent = value || variable;
-}
+  function updateEquation(variable, value) {
+   document.getElementById(variable).textContent = value || '';
+  }
+
 
 function calculate() {
   const a = document.getElementById("input-a").value;
