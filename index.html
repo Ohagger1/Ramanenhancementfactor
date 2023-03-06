@@ -100,6 +100,10 @@
   </div>
 
   <script>
+    
+    function updateEquation(variable, value) {
+      document.getElementById(variable).textContent = value || variable;
+    }
     function calculate() {
       const a = document.getElementById("input-a").value;
       const b = document.getElementById("input-b").value;
