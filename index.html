@@ -102,16 +102,34 @@
   <script>
     
     function updateEquation(variable, value) {
-      document.getElementById(variable).textContent = value || variable;
-    }
-    function calculate() {
-      const a = document.getElementById("input-a").value;
-      const b = document.getElementById("input-b").value;
-      const c = document.getElementById("input-c").value;
-      const d = document.getElementById("input-d").value;
-      const result = (a / b) * (c / d);
-      document.getElementById("output").textContent = result;
-    }
+  document.getElementById(variable).textContent = value || variable;
+}
+
+function calculate() {
+  const a = document.getElementById("input-a").value;
+  const b = document.getElementById("input-b").value;
+  const c = document.getElementById("input-c").value;
+  const d = document.getElementById("input-d").value;
+  const result = (a / b) * (c / d);
+  document.getElementById("output").textContent = result;
+}
+
+document.getElementById("input-a").addEventListener("input", function() {
+  updateEquation("variable-a", this.value);
+});
+
+document.getElementById("input-b").addEventListener("input", function() {
+  updateEquation("variable-b", this.value);
+});
+
+document.getElementById("input-c").addEventListener("input", function() {
+  updateEquation("variable-c", this.value);
+});
+
+document.getElementById("input-d").addEventListener("input", function() {
+  updateEquation("variable-d", this.value);
+});
+
   </script>
 </body>
 </html>
